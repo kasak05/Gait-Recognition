@@ -111,36 +111,7 @@ The preprocessing pipeline converts input gait sequences into silhouette represe
 
 # Installation and Setup
 
-## Clone Repository
-
-```bash
-git clone https://github.com/your-username/Gait-Recognition.git
-cd Gait-Recognition
-```
-
----
-
-## Create Virtual Environment (Optional)
-
-### Linux 
-```bash
-python -m venv venv
-source venv/bin/activate
-```
-
-### Windows
-
-```bash
-venv\Scripts\activate
-```
-
----
-
-## Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
+The project implementation and experimentation were conducted using Kaggle notebooks with GPU acceleration support.
 
 ### Main dependencies used in this project include:
 
@@ -163,22 +134,6 @@ Download and prepare the Gait3D dataset according to the OpenGait dataset prepar
 datasets/
 │
 ├── Gait3D/
-```
-
----
-
-# Execution Steps
-
-## Train the Model
-
-```bash
-python opengait/main.py --cfgs configs/your_config.yaml
-```
-
-## Test the Model
-
-```bash
-python opengait/main.py --phase test --cfgs configs/your_config.yaml
 ```
 
 ---
