@@ -89,89 +89,143 @@ configs/
 │
 README.md
 ```
+---
+
 # Dataset
 
 Experiments are conducted using gait recognition datasets supported within the OpenGait framework, primarily focusing on the Gait3D dataset.
 
 The preprocessing pipeline converts input gait sequences into silhouette representations while preserving temporal gait dynamics.
 
-#Frameworks and Libraries
+---
 
-Python
-PyTorch
-OpenCV
-NumPy
-OpenGait
+# Frameworks and Libraries
 
-#Installation and Setup
+- Python
+- PyTorch
+- OpenCV
+- NumPy
+- OpenGait
 
-Clone Repository
+---
+
+# Installation and Setup
+
+## Clone Repository
+
+```bash
 git clone https://github.com/your-username/Gait-Recognition.git
 cd Gait-Recognition
-Create Virtual Environment (Optional)
-Linux / MacOS
+```
+
+---
+
+## Create Virtual Environment (Optional)
+
+### Linux 
+```bash
 python -m venv venv
 source venv/bin/activate
-Windows
+```
+
+### Windows
+
+```bash
 venv\Scripts\activate
-Install Dependencies
+```
+
+---
+
+## Install Dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
-#Main dependencies used in this project include:
+### Main dependencies used in this project include:
 
-Python 3.10+
-PyTorch
-NumPy
-OpenCV
-tqdm
-PyYAML
-Dataset Setup
+- Python 3.10+
+- PyTorch
+- NumPy
+- OpenCV
+- tqdm
+- PyYAML
+
+---
+
+# Dataset Setup
 
 Download and prepare the Gait3D dataset according to the OpenGait dataset preparation guidelines.
 
-#Expected dataset structure:
+## Expected dataset structure
 
+```text
 datasets/
 │
 ├── Gait3D/
-Execution Steps
-Train the Model
-python opengait/main.py --cfgs configs/your_config.yaml
-Test the Model
-python opengait/main.py --phase test --cfgs configs/your_config.yaml
-Project Workflow
-Input gait sequences are preprocessed into silhouette representations.
-VPNet extracts spatial-temporal gait features.
-Motion extraction module computes temporal descriptors.
-Motion embeddings are fused with VPNet features.
-Final gait embeddings are used for identity prediction.
+```
 
-#Current Status
+---
+
+# Execution Steps
+
+## Train the Model
+
+```bash
+python opengait/main.py --cfgs configs/your_config.yaml
+```
+
+## Test the Model
+
+```bash
+python opengait/main.py --phase test --cfgs configs/your_config.yaml
+```
+
+---
+
+# Project Workflow
+
+1. Input gait sequences are preprocessed into silhouette representations.
+2. VPNet extracts spatial-temporal gait features.
+3. Motion extraction module computes temporal descriptors.
+4. Motion embeddings are fused with VPNet features.
+5. Final gait embeddings are used for identity prediction.
+
+---
+
+# Current Status
 
 The current stage of the project focuses on:
 
-VPNet implementation within OpenGait
-Development of motion extraction modules
-Integration of temporal gait dynamics
-Preliminary experimentation
+- VPNet implementation within OpenGait
+- Development of motion extraction modules
+- Integration of temporal gait dynamics
+- Preliminary experimentation
 
 Training and extensive evaluation are currently in progress.
 
-#Base Framework
+---
+
+# Base Framework
 
 This work is built upon the OpenGait framework:
 
 https://github.com/ShiqiYu/OpenGait
 
-#Future Work
+---
+
+# Future Work
 
 Future extensions include:
 
-Advanced temporal attention mechanisms
-Adaptive gait motion modeling
-Lightweight real-time gait recognition
-Improved robustness under severe occlusions
-Cross-dataset generalization studies
-Authors
+- Advanced temporal attention mechanisms
+- Adaptive gait motion modeling
+- Lightweight real-time gait recognition
+- Improved robustness under severe occlusions
+- Cross-dataset generalization studies
+
+---
+
+# Authors
 
 Project developed as part of gait recognition research and experimentation using VPNet and OpenGait.
